@@ -1,3 +1,4 @@
+Phase1:
 Downloading and Importing Metasploitable 3 VM (the Victim environment):
 ![Screenshot 2025-04-26 194716](https://github.com/user-attachments/assets/6eb215a9-2c85-42b9-87cc-88133d73b8c1)
 
@@ -9,3 +10,6 @@ Checking the connectivity between the attacker(kali) and the victim:
 Setting up metasploit framework in the kali VM:
 ![Screenshot 2025-04-27 191041](https://github.com/user-attachments/assets/7015f966-f7bb-4857-9a44-9d6ca4e8ebaa)
  
+Task1.1: 
+We choosed SSH service to compromise.
+![Screenshot 2025-04-27 204845](https://github.com/user-attachments/assets/bd3a3157-6bf5-471f-a9cc-2b5f0985d337)
