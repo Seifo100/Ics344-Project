@@ -83,10 +83,6 @@ print("[-] No valid credentials found.")
 
 Proof of Concept:
 
-![Screenshot 2025-04-27 223238](https://github.com/user-attachments/assets/2fd540b2-2eab-46cc-819f-dd568370a04a)
-
-![Screenshot 2025-04-27 223258](https://github.com/user-attachments/assets/87715ffd-6527-40ba-8160-f0ba35fec694)
-
-it tried all possible combinations, we took screenshots for the commands and when it found the correct credentials
+![image](https://github.com/user-attachments/assets/df04185c-66e7-467c-a17c-6e736957508f)
 
 
